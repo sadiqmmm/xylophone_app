@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:audioplayers/audio_cache.dart';
 
 void main() {
@@ -24,20 +23,71 @@ class MyXylophone extends StatefulWidget {
 class _MyXylophoneState extends State<MyXylophone> {
   final player = AudioCache();
 
+  void playSound(int soundNumber) {
+    player.play("note$soundNumber.wav");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue[200],
       appBar: AppBar(
+        backgroundColor: Colors.blue,
         title: Text("Xylophone"),
         centerTitle: true,
       ),
-      body: Center(
-        child: FlatButton(
-          onPressed: () {
-            player.play("note1.wav");
-          },
-          child: Text("play"),
-        ),
+      body: Column(
+        children: <Widget>[
+          FlatButton(
+            child: null,
+            color: Colors.red,
+            onPressed: () {
+              playSound(1);
+            },
+          ),
+          FlatButton(
+            child: null,
+            color: Colors.orange,
+            onPressed: () {
+              playSound(2);
+            },
+          ),
+          FlatButton(
+            child: null,
+            color: Colors.yellow,
+            onPressed: () {
+              playSound(3);
+            },
+          ),
+          FlatButton(
+            child: null,
+            color: Colors.green,
+            onPressed: () {
+              playSound(4);
+            },
+          ),
+          FlatButton(
+            child: null,
+            color: Colors.greenAccent,
+            onPressed: () {
+              playSound(5);
+            },
+          ),
+          FlatButton(
+            child: null,
+            color: Colors.blue,
+            onPressed: () {
+              playSound(6);
+            },
+          ),
+          FlatButton(
+            child: null,
+            color: Colors.purple,
+            onPressed: () {
+              playSound(7);
+            },
+          ),
+        ],
       ),
     );
   }
