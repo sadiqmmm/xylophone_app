@@ -48,17 +48,19 @@ class _MyXylophoneState extends State<MyXylophone> {
         title: Text("Xylophone"),
         centerTitle: true,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          buildPlayableKey(soundNumber: 1, userColor: Colors.red),
-          buildPlayableKey(soundNumber: 2, userColor: Colors.green),
-          buildPlayableKey(soundNumber: 3, userColor: Colors.blue),
-          buildPlayableKey(soundNumber: 4, userColor: Colors.orange),
-          buildPlayableKey(soundNumber: 5, userColor: Colors.purple),
-          buildPlayableKey(soundNumber: 6, userColor: Colors.grey),
-          buildPlayableKey(soundNumber: 7, userColor: Colors.pink),
-        ],
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            buildPlayableKey(soundNumber: 1, userColor: Colors.red),
+            buildPlayableKey(soundNumber: 2, userColor: Colors.green),
+            buildPlayableKey(soundNumber: 3, userColor: Colors.blue),
+            buildPlayableKey(soundNumber: 4, userColor: Colors.orange),
+            buildPlayableKey(soundNumber: 5, userColor: Colors.purple),
+            buildPlayableKey(soundNumber: 6, userColor: Colors.grey),
+            buildPlayableKey(soundNumber: 7, userColor: Colors.pink),
+          ],
+        ),
       ),
     );
   }
